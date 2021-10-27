@@ -1,0 +1,194 @@
+
+$bg_Principal:rgb(211, 148, 211);
+$colorLetra: purple;
+$bg_caja1: rgb(211, 195, 165);
+$bg_caja2: rgb(154, 199, 195);
+$bg_caja3: rgb(204, 170, 211);
+$bg_caja4: rgb(162, 149, 211);
+$bg_cajanosotros:rgb(204, 170, 211);
+$width_caja:600px;
+$width_img : 300px;
+$heigth_img : 200px;
+$border: solid darkmagenta;
+$width_nav: 90%;
+$margin_nav: 20px auto;
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+body{
+    background-color: rgb(197, 190, 197);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    h1, h2, h3{
+        color: $colorLetra;
+        text-align: center;
+    }
+    header{
+        .container-index{
+            width: 90%;
+            margin: 20px auto;
+            background-color: $bg_Principal;
+            .container-index__ul{
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                .container-index__li{
+                   
+                    padding: 0.7rem;
+                    margin: 0.7rem;
+                    text-decoration: none;
+                    color: $colorLetra;
+                    
+                        &:hover{
+                            background-color: rgb(214, 202, 224);
+                            color: black;
+                        }      
+                    
+                }
+        
+        
+            }
+        }
+
+    }
+        
+        
+
+    
+}
+main{
+
+
+.imagenes{
+    background-color: $bg_Principal;
+    display: flex;
+    width: 90%;
+    padding: 1rem 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+    img{
+    border: 2px solid gray;
+    opacity: .6;
+    width: 300px;
+    height: 200px;
+    transition: width 2s;
+
+}
+    img:hover{
+        opacity: 1;
+        border: solid white;
+        height: 250px;
+        width: 350px; ;
+    }  
+   
+
+}
+.contacto-index{
+            background-color:$bg_Principal;
+            width: 50%;
+            height: 600px;
+        }
+
+}                 
+
+    .footer-index{
+        width: 90%;
+        background-color:$bg_Principal;
+        display:flex ;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .footer-index__redes{
+            margin: auto;
+            padding: auto;
+        }
+        .footer-index__img{
+            width: 2rem;
+            height: 30px;
+        }
+        
+    
+    }
+        
+    
+
+@mixin cajasProductos($bg,$width){
+        background-color: $bg;
+        width: $width;
+        border: solid darkmagenta;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 20px;
+        
+         }
+
+@for $i from 1 to 4 {
+ 
+.caja1{
+@include cajasProductos($bg_caja1, $width_caja);
+    @if $i =1 {
+    width : $width_caja + $i*50px;
+    }
+}
+.caja2{
+@include cajasProductos($bg_caja2, $width_caja);
+    @if $i =2 {
+    width : $width_caja + $i*20px;
+    }
+}  
+.caja3{
+@include cajasProductos($bg_caja3, $width_caja);
+    @if $i =3 {
+    width : $width_caja + $i*30px;
+    }
+}  
+.caja4{
+@include cajasProductos($bg_caja4, $width_caja);
+
+
+     }
+    }
+        
+.imagen{
+    width: $width_img;
+    height: $heigth_img;
+    
+    
+    .especiero{
+     @extend.imagen
+     }
+     .cortinabaño{
+     @extend.imagen
+        }
+    .manta{
+     @extend.imagen
+        } 
+    .almohadones{
+    @extend.imagen
+         } 
+}
+main{
+    section{
+        h2{
+            .cajanosotros{
+                display: flex;
+                width: 90%;
+                margin: 20px auto;
+                background-color: $bg_Principal;
+}
+}
+}
+}
+.pruebagit{
+    color: red;
+    background-color: yellow;
+}
