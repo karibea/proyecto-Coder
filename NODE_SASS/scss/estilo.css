@@ -16,13 +16,13 @@ body h1, body h2, body h3 {
   text-align: center;
 }
 
-body header .container-index {
+.container-index {
   width: 90%;
   margin: 20px auto;
   background-color: #d394d3;
 }
 
-body header .container-index .container-index__ul {
+.container-index .container-index__ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,31 +38,28 @@ body header .container-index .container-index__ul {
           justify-content: center;
 }
 
-body header .container-index .container-index__ul .container-index__li {
+.container-index .container-index__ul .container-index__li {
   padding: 0.7rem;
   margin: 0.7rem;
-  text-decoration: none;
-  color: purple;
 }
 
-body header .container-index .container-index__ul .container-index__li:hover {
+.container-index .container-index__ul .container-index__li .container-index__li__a {
+  color: purple;
+  text-decoration: none;
+}
+
+.container-index .container-index__ul .container-index__li .container-index__li__a:hover {
   background-color: #d6cae0;
   color: black;
 }
 
-body .imagenes-index {
+main .imagenes {
+  background-color: #d394d3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #d394d3;
   width: 90%;
-}
-
-body .imagenes-index .imagenes-index__div {
   padding: 1rem 0;
-}
-
-body .imagenes-index .imagenes-index__div .imagenes-index__img {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -72,20 +69,31 @@ body .imagenes-index .imagenes-index__div .imagenes-index__img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  width: 100px auto;
-  height: 200px;
-  padding: 1rem 0;
 }
 
-body .contacto-index {
+main .imagenes img {
+  border: 2px solid gray;
+  opacity: .6;
+  width: 300px;
+  height: 200px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+main .imagenes img:hover {
+  opacity: 1;
+  border: solid white;
+  height: 250px;
+  width: 350px;
+}
+
+main .contacto-index {
   background-color: #d394d3;
   width: 50%;
   height: 600px;
 }
 
-body .footer-index {
+.footer-index {
   width: 90%;
   background-color: #d394d3;
   display: -webkit-box;
@@ -102,18 +110,18 @@ body .footer-index {
           justify-content: space-between;
 }
 
-body .footer-index .footer-index__redes {
+.footer-index .footer-index__redes {
   margin: auto;
   padding: auto;
 }
 
-body .footer-index .footer-index__img {
+.footer-index .footer-index__img {
   width: 2rem;
   height: 30px;
 }
 
 .caja1 {
-  background-color: #e09c9f;
+  background-color: #d3c3a5;
   width: 600px;
   border: solid darkmagenta;
   border-radius: 20px;
@@ -152,7 +160,7 @@ body .footer-index .footer-index__img {
 }
 
 .caja1 {
-  background-color: #e09c9f;
+  background-color: #d3c3a5;
   width: 600px;
   border: solid darkmagenta;
   border-radius: 20px;
@@ -191,7 +199,7 @@ body .footer-index .footer-index__img {
 }
 
 .caja1 {
-  background-color: #e09c9f;
+  background-color: #d3c3a5;
   width: 600px;
   border: solid darkmagenta;
   border-radius: 20px;
@@ -232,11 +240,14 @@ body .footer-index .footer-index__img {
 .imagen, .imagen .especiero, .imagen .cortinabaño, .imagen .manta, .imagen .almohadones {
   width: 300px;
   height: 200px;
+}
+
+main section h2 .cajanosotros {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+  background-color: #d394d3;
 }
 /*# sourceMappingURL=estilo.css.map */
