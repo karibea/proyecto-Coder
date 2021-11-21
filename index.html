@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,10 @@
             
                     <ul class="container-index__ul">
                         <li class="container-index__li container-index__li--activo">
-                            <a class="container-index__li__a"  href="Nosotros.html">Nosotros</a>
+                            <a class="container-index__li__a"  href="index.html">Inicio</a>
+                        </li>
+                        <li class="container-index__li">
+                            <a class="container-index__li__a" href="Nosotros.html">Nosotros</a>
                         </li>
                         <li class="container-index__li">
                             <a class="container-index__li__a" href="Productos.html">Productos</a>
@@ -45,40 +48,64 @@
     </div>
 
     <main>
-        <h2>Promos destacadas</h2>
-        <table class="table mx-auto" Style="width: 200px;">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Categorias</th>
-                <th scope="col">Productos</th>
-                <th scope="col">Precios</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Cocina</td>
-                <td>Olla Hierro</td>
-                <td>$7000</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Baño</td>
-                <td>Cortina Baño</td>
-                <td>$3000</td>
-              </tr>
-              <th scope="row">3</th>
-              <td>Dormitorio</td>
-              <td>Cubrecama 2P</td>
-              <td>$4000</td>
-              <tr>
+        <section class="contenedorPortada">
+            <h2>Diseño y funcionalidad</h2>
+            <img src="imagenes/sofa con almohadones.jpg" class="img-thumbnail" alt="sofa con almohadones">
+            <div class="eslogan">
                 
-              </tr>
-    </div>
-        
-          </table><br><br>
-        
+              
+            </div>
+        </section>
+        <section class="Destacados">
+        <h2>Productos destacados</h2>
+
+            <div class="container-fluid bg-ligth">
+            <div class="container py-5">
+            <section class="row">
+                <div class="col-md-3">
+                    <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title">$ 3500</h3>
+                            <p class="card-text"><b>Cortina baño teflón</b></p>
+                    </div>
+                    <div class="card-footer text-muted">válido hasta agotar stock
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                        <div class="card-body">
+                            <h3 class="card-title">$ 4000</h3>
+                                <p class="card-text"><b>Cubrecama 2 plazas liso</b></p>
+                        </div>
+                        <div class="card-footer text-muted">válido hasta agotar stock
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-center">
+                            <div class="card-body">
+                                <h3 class="card-title">$ 4500</h3>
+                                    <p class="card-text"><b>Alfombra piel sintética</b></p>
+                            </div>
+                            <div class="card-footer text-muted">válido hasta agotar stock
+                            </div>
+                            </div>
+                            </div>  
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                <div class="card-body">
+                                    <h3 class="card-title">$ 2000</h3>
+                                        <p class="card-text"><b>mantel algodón flecos</b></p>
+                                </div>
+                                <div class="card-footer text-muted">válido hasta agotar stock
+                                </div>
+                                </div>
+                                </div>          
+            </section>
+        </div>
+    </div>   
+</section>       
       
         
         <section class="imagenes">
@@ -90,59 +117,31 @@
                 <img src="Imagenes/cubrecamas 2P.jpg" alt="cubrecamas 2P" />
             </div>
             <div class="img_alfombra">
-                <img src="imagenes/alfombra piel sala.jpg" alt="alfombra piel sala" />
+                <img src="Imagenes/alfombra piel sala.jpg" alt="alfombra piel sala" />
             </div>
-            <div class="img_ollas">
-                <img src="imagenes/olla hierro colores.jpg" alt="olla hierro colores"/>
+            
+            <div class="img_manteles">
+                <img src="imagenes/manteles.jpg" alt="mantel mesa"/>
             </div>
+            
         </section><br>
         
 
-        <section class="contacto-index">
-            <h3 class="contacto-index__h3">Contacto</h3>  
-                <form action="" class="contacto-idex__form">
-                    <fieldset>
-                        <legend>Formulario de Contacto</legend>
-                    <div class="contacto-index__nombre">
-                        <label for="Nombre">Escribe tu nombre</label>
-                        <input type="text" name="nombre">
-                        <label for="Apellido">Escribe tu apellido</label>
-                        <input type="text" name="apellido"><br>
-                    </div> <br>
-                    <div class="contacto-index__mail">
-                        <label for="email">Escribe tu mail *</label>
-                        <input type="email" required>
-                    </div> <br>
-                    <div class="contacto-index__password">
-                        <label for="password">Escribe tu password</label>
-                        <input type="password">
-                    </div> <br>
-                    <div class="contacto-index__comentarios">
-                        <label for="comentarios">Escribe tu mensaje</label><br>
-                        <textarea name="comentario" id="" cols="35" rows="8"></textarea>
-                    </div><br>
-                    <div class="contacto-index__terminos">
-                        <label for="terminos">Acepto terminos</label>
-                        <input type="checkbox" name="terminos" required>
-                    </div>
-                    <div class="contacto-index__enviardatos">
-                        <input type="submit" value="enviar datos">
-                        <input type="reset" value="limpiar formulario">
-
-                    </div>
-                </fieldset>
-            </form>
-        </section>
+      
         
-    </main><br>
+    </main><br><br>
 
     <footer class="footer-index">
         <div class="footer-index__autor">
-            <p>Todos los derechos reservados</p>
+            <p>Show Room: Belgrano 2314, CABA.</p> 
+               <p> Teléfonos 011-000-4500/50
+              e-mail: consultas@decohogar.com.ar</p>
+               <p>*Todos los derechos reservados</p> 
         </div>
         <div class="footer-index__redes">
             <a href="http://www.facebook.com"><img src="imagenes/logo facebook.png" alt="logo de facebook" class="footer-index__img"></a>
             <a href="http://www.instagram.com"><img src="imagenes/instagram.jpg" alt="logo de instagram"  class="footer-index__img"></a>
+            <a href="#"><img src="imagenes/mail.gif" alt="logo mail"  class="footer-index__img"></a
         </div>
     </footer>
     <script src="js/wow.min.js"></script>

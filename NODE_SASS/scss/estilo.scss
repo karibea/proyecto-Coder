@@ -1,20 +1,20 @@
 
-$bg_Principal:rgb(211, 148, 211);
-$colorLetra: purple;
-$bg_caja1: rgb(211, 195, 165);
-$bg_caja2: rgb(154, 199, 195);
-$bg_caja3: rgb(204, 170, 211);
-$bg_caja4: rgb(162, 149, 211);
+$bg_Principal: rgb(221, 211, 211);
+$colorLetra: rgb(90, 72, 72);
 $bg_cajanosotros:rgb(204, 170, 211);
-$width_caja:600px;
-$width_img : 300px;
-$heigth_img : 200px;
-$border: solid darkmagenta;
+$width_caja:70%;
+$width_img : 70% ;
+$heigth_img : 4rem;
+$bg_caja1: $bg_Principal;
+$bg_caja2: $bg_Principal;
+$bg_caja3: $bg_Principal;
+$bg_caja4: $bg_Principal;
+
 $width_nav: 90%;
 $margin_nav: 20px auto;
 
 
-
+                                       
 *{
     margin:0;
     padding: 0;
@@ -22,19 +22,24 @@ $margin_nav: 20px auto;
     }
 body{
     background-color: rgb(197, 190, 197);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
     h1, h2, h3{
         color: $colorLetra;
         text-align: center;
+        font-weight: bold;
+        padding: 1.2rem;
     }
     
 }
-        
+
         .container-index{
             width: 90%;
-            margin: 20px auto;
-            background-color:$bg_Principal;
-            
+            margin: 1rem;
+            height: 4rem;
+            background-color: $bg_Principal;
+            display: flex;
+            align-items: center;
             
             .container-index__ul{
                     list-style-type: none;
@@ -42,6 +47,9 @@ body{
                     flex-direction: row;
                     flex-wrap: wrap;
                     justify-content: center;
+                    align-items: center;
+                    
+                    
                 .container-index__li{
                    
                     padding: 0.7rem;
@@ -53,8 +61,9 @@ body{
                    
                     
                         &:hover{
-                            background-color: rgb(214, 202, 224);
-                            color: black;
+                            background-color: rgb(190, 187, 187);
+                            color: rgb(58, 56, 56);
+                           
                         }      
                     
                 }
@@ -70,7 +79,26 @@ body{
     
 
 main{
-
+    .contenedorPortada{
+        width: 90%;
+    }
+    p{margin: 1.2rem;}
+    img{
+        width: 100%;
+        margin: 1.2rem;
+    }
+    h2{
+        font-size: medium;
+       
+        margin-top: 1.2rem;
+    }
+.col-md-3{
+    
+    font-size: medium;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
 
 .imagenes{
     background-color: $bg_Principal;
@@ -85,7 +113,7 @@ main{
     img{
     border: 2px solid gray;
     opacity: .6;
-    width: 300px;
+    width: 250px;
     height: 200px;
     transition: width 2s;
 
@@ -94,7 +122,8 @@ main{
         opacity: 1;
         border: solid white;
         height: 250px;
-        width: 350px; ;
+        width: 300px; 
+        transition: 0.5s;
     }  
    
 
@@ -102,14 +131,20 @@ main{
 .contacto-index{
             background-color:$bg_Principal;
             width: 50%;
-            height: 600px;
+            height: 3rem;
+            margin-bottom: auto;
+            margin-left: 2rem;
         }
 
 }                 
 
     .footer-index{
         width: 90%;
-        background-color:$bg_Principal;
+        height: auto;
+        font-size: small;
+        padding: 1rem;
+        margin: 1.2rem;
+        background-color:rgb(158, 153, 153);
         display:flex ;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -126,16 +161,31 @@ main{
     
     }
         
+main.categorias{
+    display: flex;
+    width: 2rem;
+    background-color: $bg_Principal;
+}  
+.caja1 h2{
+    padding: 10px;
     
-
+}  
+.caja2 h2{
+    padding: 10px;
+}
+.caja3 h2{
+    padding: 10px;
+}
+.caja4 h2{
+    padding: 10px;
+}
 @mixin cajasProductos($bg,$width){
-        background-color: $bg;
-        width: $width;
-        border: solid darkmagenta;
-        border-radius: 20px;
-        margin: 20px;
-        padding: 20px;
         
+        width: $width;
+        background-color: $bg_Principal;
+        margin: 1.2rem;
+        padding: 10px ;
+        justify-content: center
          }
 
 @for $i from 1 to 4 {
@@ -143,31 +193,34 @@ main{
 .caja1{
 @include cajasProductos($bg_caja1, $width_caja);
     @if $i =1 {
-    width : $width_caja + $i*50px;
+    width : $width_caja + $i*5%;
     }
 }
 .caja2{
 @include cajasProductos($bg_caja2, $width_caja);
     @if $i =2 {
-    width : $width_caja + $i*20px;
+    width : $width_caja + $i*5%;
     }
 }  
 .caja3{
 @include cajasProductos($bg_caja3, $width_caja);
     @if $i =3 {
-    width : $width_caja + $i*30px;
+    width : $width_caja + $i*6%;
     }
 }  
 .caja4{
 @include cajasProductos($bg_caja4, $width_caja);
-
+@if $i =4 {
+    width : $width_caja + $i*5%;
 
      }
     }
-        
+    }    
 .imagen{
     width: $width_img;
     height: $heigth_img;
+    background-color: $bg_Principal;
+   
     
     
     .especiero{
@@ -184,15 +237,86 @@ main{
          } 
 }
 main{
-    section{
-        h2{
-            .cajanosotros{
-                display: flex;
-                width: 90%;
-                margin: 20px auto;
-                background-color: $bg_Principal;
-}
-}
-}
+    
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 1rem;
+        background-color: $bg_Principal;
+        padding: 1rem ;
+    
+    contenedor.cajaNosotros{
+            width: 70%;
+            margin: 1rem;
+            margin-left: 2rem;
+            background-color: $bg_Principal;
+            text-align: center;
+            
+            .TituloNosotros{
+                text-align: center;
+                padding: 1rem;
+                margin-top: 1rem;
+            }
+            }
+
+    contenedor.imagenNosotros{
+        width: $width_img;
+        height: $heigth_img;
+        background-color: $bg_Principal;
 }
 
+
+}     
+}
+
+
+
+
+@media (max-width:768px) {
+    .container-index{
+            background-color: transparent;
+            margin-top: 10rem ;
+            margin-bottom: 5rem ;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+        }
+        
+    .container-index ul li{
+        width: 100%;
+        padding: 16px;
+        text-align: left;
+        background-color:rgb(221, 211, 211) ;
+
+    }
+    }
+
+    @media (max-width:768px){
+        .contenedor{display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 50%;
+            margin: 1rem;
+            background-color: $bg_Principal;
+            padding: 1rem ;
+        
+        .imagenNosotros{
+            width: 90%;
+            height: 90%;
+            background-color: $bg_Principal;
+    
+    }
+}
+}
+@media (max-width:768px){
+
+    .footer-index__img{
+        padding: 3px;
+        
+    
+        
+    }
+    }
+    
